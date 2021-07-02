@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+});*/
+
+Route::get('/getCity',[App\Http\Controllers\MapController::class,'getCity']);
+Route::get('/suggestAdress',[App\Http\Controllers\MapController::class,'suggestAdress']);
+Route::get('/getAccidents',[App\Http\Controllers\MapController::class,'getAccidents']);
